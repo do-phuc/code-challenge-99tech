@@ -32,7 +32,7 @@ const components: Components = {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="font-semibold !text-champagne !underline underline-offset-2 hover:text-gold"
+      className="font-semibold !text-champagne !underline underline-offset-4 hover:text-gold"
     >
       {children}
     </a>

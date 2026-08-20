@@ -126,7 +126,7 @@ export function SwapForm() {
         <button
           id="fancy-form-prices-retry"
           type="button"
-          className="w-fit cursor-pointer text-sm text-champagne underline-offset-2 hover:underline"
+          className="w-fit cursor-pointer text-sm text-champagne underline-offset-4 !underline"
           onClick={() => void pricesQuery.refetch()}
         >
           Retry
