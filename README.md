@@ -20,9 +20,9 @@ npm run preview
 | `src/app`           | Bootstrap, router, global CSS                                     |
 | `src/pages`         | Thin route screens (default-exported for `React.lazy`)            |
 | `src/features`      | Domain modules — one folder per problem solution                  |
-| `src/shared/ui`     | Reusable primitives (`Button`, `Card`, `PageHeader`, `Container`) |
-| `src/shared/layout` | `AppShell` page frame                                             |
-| `src/shared/lib`    | `routes.ts`, design tokens, `cn()`                                |
+| `src/shared/ui`     | Reusable primitives (`Button`, `Card`, `Markdown`, `SplitLayout`, …) |
+| `src/shared/layout` | `AppShell` page frame                                                |
+| `src/shared/lib`    | `routes.ts`, `cn()`                                                  |
 
 Pages compose features. Features own problem logic. Shared UI stays generic.
 

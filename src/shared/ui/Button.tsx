@@ -29,7 +29,7 @@ export type ButtonProps = NativeButtonProps | LinkButtonProps;
 
 function buttonClassName(variant: Variant, size: Size, className?: string) {
   return cn(
-    'inline-flex items-center justify-center rounded-full uppercase tracking-[0.12em] cursor-pointer',
+    'inline-flex items-center justify-center gap-2 rounded-full uppercase tracking-[0.12em] cursor-pointer',
     'transition-[background,border-color,color,box-shadow,transform] duration-300 ease-in-out',
     'disabled:cursor-not-allowed disabled:opacity-50',
     size === 'sm' && 'px-4 py-2 text-xs',
