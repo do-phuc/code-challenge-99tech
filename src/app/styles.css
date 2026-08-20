@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+  --font-sans: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #0f0f0f;
+  --color-bg-subtle: rgb(255 255 255 / 0.05);
+  --color-fg: #ffffff;
+  --color-fg-high: rgb(255 255 255 / 0.9);
+  --color-fg-med: rgb(255 255 255 / 0.8);
+  --color-fg-muted: rgb(255 255 255 / 0.66);
+  --color-fg-faint: rgb(255 255 255 / 0.5);
+  --color-fg-dim: rgb(255 255 255 / 0.3);
+  --color-border: rgb(255 255 255 / 0.14);
+  --color-border-strong: rgb(255 255 255 / 0.22);
+  --color-border-faint: rgb(255 255 255 / 0.1);
+  --color-emerald: oklch(0.45 0.13 160);
+  --color-champagne: oklch(0.82 0.06 85);
+  --color-ink: #0a0a0a;
+  --color-cream: #fff9f0;
+  --color-gold: #f0c75e;
+
+  --radius-lux-sm: 2px;
+  --radius-lux-md: 4px;
+  --radius-lux-lg: 8px;
+}
+
+:root {
+  color-scheme: dark;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #0f0f0f;
+  --color-bg-subtle: rgb(255 255 255 / 0.05);
+  --color-fg: #ffffff;
+  --color-fg-high: rgb(255 255 255 / 0.9);
+  --color-fg-med: rgb(255 255 255 / 0.8);
+  --color-fg-muted: rgb(255 255 255 / 0.66);
+  --color-fg-faint: rgb(255 255 255 / 0.5);
+  --color-fg-dim: rgb(255 255 255 / 0.3);
+  --color-border: rgb(255 255 255 / 0.14);
+  --color-border-strong: rgb(255 255 255 / 0.22);
+  --color-border-faint: rgb(255 255 255 / 0.1);
+  --accent-emerald: oklch(0.45 0.13 160);
+  --accent-champagne: oklch(0.82 0.06 85);
+  --pw-cream: #fff9f0;
+  --pw-gold: #f0c75e;
+  --pw-ink: #0a1f1a;
+
+  font-family: var(--font-body);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.app-shell {
+  min-height: 100dvh;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse at 30% 20%, #1a1a1a 0%, #0a0a0a 60%, #000 100%),
+    repeating-linear-gradient(115deg, rgb(255 255 255 / 0.012) 0 2px, transparent 2px 6px);
+}
+
+.lux-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  color: var(--color-fg);
+}
+
+.lux-display em {
+  font-style: italic;
+  color: var(--accent-champagne);
+}
+
+.lux-heading {
+  font-family: var(--font-body);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--color-fg);
+}
+
+.lux-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--color-fg-muted);
+}
+
+.lux-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pw-gold);
+}
+
+.lux-mono {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-fg-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.lux-caption {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: var(--color-fg-muted);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-champagne);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
