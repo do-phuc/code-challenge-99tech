@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { AppProviders } from '@/app/providers/AppProviders';
 import { AppRouter } from '@/app/router';
 import '@/app/styles.css';
 
@@ -11,6 +12,8 @@ if (!rootEl) {
 
 createRoot(rootEl).render(
   <StrictMode>
-    <AppRouter />
+    <AppProviders>
+      <AppRouter />
+    </AppProviders>
   </StrictMode>,
 );

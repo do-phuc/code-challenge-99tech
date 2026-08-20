@@ -27,6 +27,21 @@ const components: Components = {
     </ol>
   ),
   li: ({ children }) => <li className="leading-relaxed">{children}</li>,
+  a: ({ href, children }) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-semibold !text-champagne !underline underline-offset-2 hover:text-gold"
+    >
+      {children}
+    </a>
+  ),
+  blockquote: ({ children }) => (
+    <blockquote className="m-0 mb-4 rounded-xl border border-[rgba(240,199,94,0.28)] bg-[rgba(240,199,94,0.08)] px-4 py-3 text-sm text-fg-med last:mb-0">
+      {children}
+    </blockquote>
+  ),
   code: ({ className, children }) => {
     const text = String(children).replace(/\n$/, '');
     const language = /language-(\w+)/.exec(className ?? '')?.[1];

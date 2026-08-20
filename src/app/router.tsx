@@ -11,7 +11,7 @@ const MessyReactPage = lazy(() => import('@/pages/MessyReactPage'));
 function RouteFallback() {
   return (
     <main aria-busy="true" aria-live="polite" className="grid min-h-dvh place-items-center">
-      <p className="lux-caption m-0">Loading solution</p>
+      <p className="lux-caption m-0">Loading...</p>
     </main>
   );
 }
