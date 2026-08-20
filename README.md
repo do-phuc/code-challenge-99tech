@@ -11,6 +11,21 @@ npm run dev      # local server
 npm run build    # typecheck + production bundle
 npm run lint
 npm run preview
+npm run deploy:netlify   # production deploy via Netlify CLI (after link)
+```
+
+## Deploy (Netlify)
+
+Same setup as the portfolio: Vite build to `dist`, SPA fallback for client routes.
+
+- Config: [`netlify.toml`](netlify.toml) — `npm run build`, publish `dist`, `/*` → `/index.html` (200)
+- Site: [phuc-do-code-challenge.netlify.app](https://phuc-do-code-challenge.netlify.app)
+- Continuous deploy: push to `main` on [do-phuc/code-challenge-99tech](https://github.com/do-phuc/code-challenge-99tech)
+
+```bash
+npx netlify-cli login
+npx netlify-cli link --name phuc-do-code-challenge
+npm run build && npm run deploy:netlify
 ```
 
 ## Folders
