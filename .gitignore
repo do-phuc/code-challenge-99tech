@@ -10,8 +10,12 @@ lerna-debug.log*
 node_modules
 dist
 tmp
+.netlify
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+
+# Local Netlify folder
+.netlify
