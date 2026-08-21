@@ -63,11 +63,11 @@ export const SUM_TO_N_SOLUTIONS: readonly SumToNSolution[] = [
     title: 'C — Recursion',
     description: 'Reduce the problem by summing n with sum(n - 1).',
     code: `const sumToNRecursive = function(n) {
-      if (n <= 1) {
-          return n;
-      }
-      return n + sumToNRecursive(n - 1);
-    };`,
+  if (n <= 1) {
+    return n;
+  }
+  return n + sumToNRecursive(n - 1);
+};`,
     run: sumToNRecursive,
   },
 ] as const;
