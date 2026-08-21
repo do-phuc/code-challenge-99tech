@@ -3,6 +3,7 @@ import { Controller, useForm } from 'react-hook-form';
 import { AmountField } from '@/features/fancy-form/components/AmountField';
 import { SubmitButton } from '@/features/fancy-form/components/SubmitButton';
 import { SwapDirectionButton } from '@/features/fancy-form/components/SwapDirectionButton';
+import { SwapFormSkeleton } from '@/features/fancy-form/components/SwapFormSkeleton';
 import { TokenSelect } from '@/features/fancy-form/components/TokenSelect';
 import { usePricesQuery } from '@/features/fancy-form/api/usePricesQuery';
 import {
@@ -107,14 +108,7 @@ export function SwapForm() {
   }
 
   if (pricesQuery.isLoading) {
-    return (
-      <div className="flex flex-col gap-4" aria-busy="true" aria-live="polite">
-        <div className="h-24 animate-pulse rounded-xl bg-bg-subtle" />
-        <div className="h-10 animate-pulse rounded-full bg-bg-subtle" />
-        <div className="h-24 animate-pulse rounded-xl bg-bg-subtle" />
-        <p className="lux-caption m-0">Loading token prices…</p>
-      </div>
-    );
+    return <SwapFormSkeleton />;
   }
 
   if (pricesQuery.isError) {
